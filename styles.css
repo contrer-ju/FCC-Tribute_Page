@@ -1,0 +1,74 @@
+#main {
+  height: 100vh;
+  max-height: 1024px;
+  max-width: 2048px;
+  background: white;
+  display: grid;
+  position: absolute;
+  grid-template-columns: auto;
+  grid-template-rows: auto auto auto auto;
+  grid-gap: 5px;
+  grid-template-areas:
+    "imagen"
+    "titulo"
+    "info"
+    "enlace";
+}
+
+@media (min-width: 800px) {
+  #main {
+    display: grid;
+    grid-template-columns: 20% auto;
+    grid-template-rows: 15% auto auto;
+    grid-gap: 10px;
+    grid-template-areas:
+      "titulo titulo"
+      "imagen info"
+      "enlace enlace";
+  }
+}
+
+#title {
+  grid-area: titulo;
+  background: lightgray;
+  font-size: 3vh;
+  color: black;
+  text-align: center;
+}
+
+#img-div {
+  grid-area: imagen;
+  width: 100%;
+  justify-self: center;
+  align-self: center;
+}
+
+#image {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: auto;
+}
+
+#img-caption {
+  font-size: 2vh;
+  color: gray;
+  text-align: center;
+}
+
+#tribute-info {
+  grid-area: info;
+  background: lightskyblue;
+  font-size: 2vh;
+  color: black;
+}
+
+#tribute-link-container {
+  grid-area: enlace;
+  text-align: center;
+}
+
+#tribute-link {
+  font-size: 2vh;
+  color: blue;
+}
