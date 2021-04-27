@@ -1,8 +1,11 @@
+#body{
+  background: lightgrey;
+}
+
 #main {
   height: 100vh;
   max-height: 1024px;
   max-width: 2048px;
-  background: white;
   display: grid;
   position: absolute;
   grid-template-columns: auto;
@@ -18,9 +21,9 @@
 @media (min-width: 800px) {
   #main {
     display: grid;
-    grid-template-columns: 20% auto;
+    grid-template-columns: 20% 75%;
     grid-template-rows: 15% auto auto;
-    grid-gap: 10px;
+    grid-gap: 7px;
     grid-template-areas:
       "titulo titulo"
       "imagen info"
@@ -29,8 +32,10 @@
 }
 
 #title {
+  width: 100%;
+  margin: auto;
   grid-area: titulo;
-  background: lightgray;
+  background: gray;
   font-size: 3vh;
   color: black;
   text-align: center;
@@ -57,13 +62,15 @@
 }
 
 #tribute-info {
+  width: 100%;
+  margin: auto;
   grid-area: info;
-  background: lightskyblue;
   font-size: 2vh;
   color: black;
 }
 
 #tribute-link-container {
+  width: 100%;
   grid-area: enlace;
   text-align: center;
 }
@@ -71,4 +78,5 @@
 #tribute-link {
   font-size: 2vh;
   color: blue;
+  align-self: center;
 }
